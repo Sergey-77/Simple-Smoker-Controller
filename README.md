@@ -66,11 +66,14 @@ The controller can either connect to your **Home Wi-Fi network** or operate stan
 | **Press Flash Button for 3s** | Custom AP Mode | *Configured Project AP* | *Configured Pass* | `192.168.4.1` |
 | **Press Flash Button for 10s**| Factory Reset AP| `smoker` | *None (Open)* | `192.168.4.1` |
 
+<sup>On normal boot if home Wi-Fi is not configured Custom AP Wi-Fi will be started. If AP not configured open AP will be started with `smoker` SSID.</sup>
+<sup>Controller will flash last three digits of assigned IP, no leading zeros. Example: 203 will be two short flashes, pause, one long flash for zero, pause, three short flashes.</sup>
+
 ### 🛠️ How to Trigger Access Point (AP) Mode
 1. Power cycle or hit the **Reset** button on the microcontroller.
 2. Watch for the **blue light to blink** immediately at power-up.
-3. **For Custom AP:** Press and hold the **Flash** button for **3 seconds** while the light blinks.
-4. **For Factory Reset AP:** Press and hold the **Flash** button for **10 seconds**. The controller will spin up an open hotspot named `smoker`.
+3. **For Custom AP:** On NodeMCU press and hold the **Flash** button or on Nano ESP32 short pin D2 to ground for **3 seconds**.
+4. **For Factory Reset AP:** On NodeMCU press and hold the **Flash** button or on Nano ESP32 short pin D2 to ground for **10 seconds**. The controller will spin up an open hotspot named `smoker`.
 5. Connect your phone or computer to the Wi-Fi network and navigate to `http://192.168.4.1` in your browser to access the control panel.
 
 ---
