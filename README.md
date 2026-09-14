@@ -35,7 +35,7 @@ Both microcontrollers operate natively on 3.3V logic but interface cleanly with 
 
 | Target Component | Nano ESP32 Pin | Notes |
 |---|---|---|
-| Smoker 5V Supply | VBUS (or VIN) | Powers the microcontroller from the stock unit |
+| Smoker 5V Supply | VIN | Powers the microcontroller from the stock unit |
 | Smoker Ground | GND | Common Ground reference |
 | Smoker Heater Relay | D3 | Drives the internal heater switching circuit via PWM |
 | MAX31850K VCC | 3.3V | Local 3.3V power out from the Nano |
