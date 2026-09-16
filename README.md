@@ -1,4 +1,4 @@
-## Controller for Charbroil Simple Smoker
+# [Controller for Charbroil Simple Smoker](https://github.com/Sergey-77/Simple-Smoker-Controller)
 My smoker had random issues connecting to the phone app, which is how this project started.
 The original controller uses a PWM signal with a preset duty cycle to control the smoker's temperature. I recreated this functionality in the code and added the option to integrate a thermocouple for better temperature control using PID. For this setup, I used a MAX31850K thermocouple amplifier and a Type-K thermocouple with a stainless steel tip from adafruit.com.
 ## Hardware Components
@@ -15,7 +15,7 @@ You need to install extra libraries in the Arduino IDE for the MAX31850 Thermoco
 * MAX31850 DallasTemp by Adafruit
 
 If you are using the Arduino Nano ESP32, you need also add the following code block to OneWire.h:
-```
+```c++
 #elif defined(ARDUINO_ARCH_ESP32)
 #define PIN_TO_BASEREG(pin) ((volatile uint32_t *)((digitalPinToGPIONumber(pin)>31)?1:0))
 #define PIN_TO_BITMASK(pin) (1 << (digitalPinToGPIONumber(pin)&31))
