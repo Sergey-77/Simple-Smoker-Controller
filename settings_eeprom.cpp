@@ -17,6 +17,7 @@ void get_settings_eeprom(){
 		settings.Kp = 0.5;
 		settings.Ki = 0.03;
 		settings.Kd = 0.4;
+		settings.integral_window = 50;
 		settings.temp_high = 0;
 		settings.pwm_preset[0] = 20;
 		settings.pwm_preset[1] = 25;

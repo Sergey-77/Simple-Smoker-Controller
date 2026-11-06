@@ -38,6 +38,7 @@ The code needs to be added to OneWire.h for Arduino Nano ESP32 support
 #include "settings_eeprom.h"
 #include "html.h"
 #include "heater_control.h"
+#include "temperature_chart.h"
 
 #include "OneWire.h"
 #include "DallasTemperature.h"
@@ -53,6 +54,7 @@ MainPage main_page;
 SettingsPage settings_page;
 WifiPage wifi_page;
 Data data;
+chart temperature_chart(360);
 
 #define PWM_LENGTH 32000
 
@@ -73,11 +75,11 @@ void led_off(){
 }
 
 void blink_ip(int ip){
-  int ii;
+  int ii = 0;
   if (ip<10)ii = 2;
   else if (ip<100)ii = 1;
   for(; ii < 3; ii++){
-    int i, zero;
+    int i = 0, zero = 0;
     if(ii == 0 and ip>99){
       i = ip / 100;
       ip -= (i*100);
@@ -268,6 +270,10 @@ void loop() {
     thermocouple = sensors.getTempCByIndex(0)*1.8 + 32; //with celsius to fahrenheit conversion
     if(isnan(thermocouple))thermocouple = -127;
     temp_update_time = time_now;
+    toggle ^=1;
+    if(toggle){
+      temperature_chart.add_data_point(thermocouple - 100);
+    }
   }
   if(settings.pid_enabled && running && ((time_now - pid_update_time) > 30000UL)){
     pwm_duty_cycle = heater_controll_pid(smoker_temp_setpoint, thermocouple);

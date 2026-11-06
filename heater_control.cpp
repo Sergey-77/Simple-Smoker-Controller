@@ -13,11 +13,12 @@ int heater_controll_pid(int setpoint, float temperature, int first_run){
 	float error = setpoint - temperature;
 	if(first_run){
 		errPrev = error;
-		preheated = 0;
+		if(settings.integral_window > 0) preheated = 0;
+		else preheated = 1;
 		errSum = errSum2 = 0;
 	}
 	float delta = error - errPrev;
-	if((abs(delta) < 1 && temperature > setpoint - 15) || preheated){
+	if((temperature >= setpoint - settings.integral_window) || preheated){
 		errSum2 = settings.Ki * error;
 		preheated = 1;
 	}else{

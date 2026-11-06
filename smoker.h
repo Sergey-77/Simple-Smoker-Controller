@@ -23,6 +23,7 @@ extern int running;
 extern int start_button_validation;
 extern float thermocouple;
 extern int pwm_duty_cycle;
+extern int toggle;
 
 unsigned long get_pwm_duty_cycle_length();
 
