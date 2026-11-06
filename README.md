@@ -86,6 +86,6 @@ The controller can either connect to your Home Wi-Fi network or operate standalo
 <img src="images/1.jpeg" alt="1" width="600">
 <img src="images/2.jpeg" alt="2" width="600">
 <img src="images/3.jpeg" alt="3" width="600">
-<img src="images/4.jpeg" alt="4" width="600">
-<img src="images/5.jpeg" alt="5" width="600">
+<img src="images/7.png" alt="4" width="600">
+<img src="images/8.png" alt="5" width="600">
 <img src="images/6.jpeg" alt="6" width="600">
