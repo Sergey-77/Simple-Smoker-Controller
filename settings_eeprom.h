@@ -11,6 +11,7 @@ struct settings_struct{
 		float Kp;
 		float Ki;
 		float Kd;
+		int integral_window;
 		int temp_high;
 		int pwm_preset[17];
 };

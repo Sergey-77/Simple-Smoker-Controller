@@ -22,3 +22,5 @@ int running;
 int start_button_validation = 0;
 float thermocouple;
 int pwm_duty_cycle;
+int toggle = 0;
+
