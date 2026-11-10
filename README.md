@@ -57,7 +57,6 @@ Both microcontrollers operate natively on 3.3V logic but interface cleanly with 
 | MAX31850K VCC | 3V3 | Local 3.3V power out from the NodeMCU |
 | MAX31850K DATA | D7 | 1-Wire Data line (Requires 4.7kΩ pull-up to 3.3V) |
 
-------------------------------
 ## 🌐 Wi-Fi Configuration & Network Modes
 The controller can either connect to your Home Wi-Fi network or operate standalone by creating its own Access Point (AP). You can manually force the device into AP mode using the onboard Flash button on NodeMCU or by shorting D2 pin to ground on Nano ESP32 during boot-up or reset.
 ## Network Behavior Matrix
