@@ -55,7 +55,20 @@ h1[id] {
   }
 
   h1[id] {
-    background-color: #777777;
+    background-color: #ddd9d9;
+  }
+  .markdown-body .highlight pre, .markdown-body pre, .highlight, .highlight .cp{
+    color:#dfdfdf;
+    background-color: #555555;
+    scrollbar-color: #717171 #b0b0b0;
+  }
+
+  .markdown-body table tr {
+    background-color: #b0b0b0;
+  }
+
+  .markdown-body table tr:nth-child(2n) {
+    background-color: #c4c4c4;
   }
 }
 
